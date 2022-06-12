@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Customer } from './types/customer.type';
+import { Customer } from '../types/customer.type';
 
 export class Customers {
     private customerData: Customer[] = [];
