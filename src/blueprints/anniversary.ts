@@ -3,10 +3,10 @@ import { Customer } from "../types/customer.type";
 
 export class Anniversary {
     
-     private customers: Customer[] = [];
+     customers: Customer[] = [];
      private lat: number = 52.493256;
      private long: number = 13.446082;
-     private customerIds: string[] = [];
+     customerIds: string[] = [];
     
      constructor(private customer: Customers) {
          this.customer = new Customers();
