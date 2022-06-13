@@ -4,14 +4,14 @@ services:
   backend:
     entrypoint: ["npm", "start"]
     build:
-      context: ./parloa 
+      context: ./ 
       dockerfile: Dockerfile
     environment:
       NODE_ENV: development
     image: node:16.15-alpine
     restart: always
     ports:
-      - "8080:8080"
+      - "7070:7070"
     volumes:
-      - ./parloa:/opt/parloa
-    working_dir: /opt/parloa
+      - ./:/opt
+    working_dir: /opt

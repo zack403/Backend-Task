@@ -13,5 +13,5 @@ WORKDIR /usr
 COPY package.json ./
 RUN npm install --only=production
 COPY --from=0 /usr/dist .
-EXPOSE 80
+EXPOSE 70
 CMD ["npm","start"]

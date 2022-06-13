@@ -21,11 +21,11 @@ export class Customers {
             const long = customer[2].split(":")[1].trim();
 
             if(!this.isValidUUID(id)) {
-                console.warn(`Invalid id: ${id} supplied at line number ${index + 1}`)
+                console.log(`Invalid id: ${id} supplied at line number ${index + 1}`)
             }
 
             if(!this.isValidLatAndLong(`${lat},${long}`)) {
-                console.warn(`Invalid latitude: ${lat} and longitude: ${long} supplied at line number ${index + 1}`)
+                console.log(`Invalid latitude: ${lat} and longitude: ${long} supplied at line number ${index + 1}`)
             }
 
             let obj: Customer = {
