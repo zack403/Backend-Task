@@ -4,7 +4,7 @@ import { Customers } from "./blueprints/customer";
 const startApp = () => {
     const a = new Anniversary(new Customers);
     a.getExportedCustomers();
-    console.log(a.eligibleCustomers);
+    console.log("Invitable Customers", a.eligibleCustomers);
 }
 
 startApp();

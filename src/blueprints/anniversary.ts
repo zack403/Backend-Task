@@ -1,11 +1,10 @@
 import { Customers } from "./customer";
 import { Customer } from "../types/customer.type";
+import { distanceInKm, lat, long } from "../constant";
 
 export class Anniversary {
     
      customers: Customer[] = [];
-     private lat: number = 52.493256;
-     private long: number = 13.446082;
      customerIds: string[] = [];
     
      constructor(private customer: Customers) {
@@ -24,13 +23,13 @@ export class Anniversary {
             
             for (let c of this.customers) {
                 
-                const distance = this.greatCircleDistance(
-                                this.lat, this.long, 
+                const customerDistance = this.greatCircleDistance(
+                                lat, long, 
                                 Number(c.lat), 
                                 Number(c.long)
                             );
                 
-                if(distance <= 100) {
+                if(customerDistance <= distanceInKm) {
                     this.customerIds.push(c.id);
                 }
             }
